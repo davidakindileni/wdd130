@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Robot, Arial, sans-serif;
+}
+
 :root {
     --main-blue: darkblue;
     /* --light-gray: #eee; */
@@ -27,9 +38,12 @@ nav a {
 
 h1 {
     color: var(--main-blue);
+    padding: var(--padding-rem);
 }
 
 main img {
+    float: right;
+    margin: 0 0 var(--padding-small) var(--padding-small);
     width: 150px;
     height: auto;
     border: var(--standard-border) steelblue;
@@ -38,22 +52,33 @@ main img {
 }
 
 p {
-    padding: 0;
+    /* padding: 0; */
+    margin: 0 1rem 0 1rem;
+}
+
+ul li {
+    margin-left: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 aside {
     width: 20rem;
-    margin: var(padding-rem);
-    border: var(--standard-border) var(--border-gray); /* 1 */
-    padding: var(--padding-rem);
-    background-color: #eee;
-    color: #333;
     text-align: center;
+    position: relative;
+}
+
+aside h2 {
+    position: absolute;
+    top: 250px;
+    left: 125px;
+    color: var(--main-blue);
+    font-weight: bold;
 }
 
 aside img {
     width: 200px;
     height: auto;
+    padding-bottom: var(--padding-rem);
 }
 
 footer {
@@ -61,3 +86,19 @@ footer {
     border-top: var(--standard-border) #000;
     text-align: center;
 }
+
+footer p {
+    padding: var(--padding-small);
+    color: #000;
+}
+
+/* Class Selectors */
+
+.box {
+    margin: var(--padding-rem);
+    border: var(--standard-border) rgb(0 0 0 / 10%);
+    padding: var(--padding-rem);
+    background-color: #eee;
+    color: #333;
+}
+
