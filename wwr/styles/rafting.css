@@ -1,0 +1,113 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 960px;
+}
+
+body {
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+:root {
+    --primary-color: #8DB38B;
+    --secondary-color: #BDBEA9;
+    --accent1-color: #d2ab99;
+    --accent2-color: #56876D;
+    --padding-small: 10px;
+    --standard-border: 1px solid;
+    --shadow-gray: 0 0 30px gray;
+    --padding-rem: 1rem; 
+    --padding-medium: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent2-color);
+}
+
+.hero {
+    width: 100%;
+    margin: 15px auto 0;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #eee;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.hero-desc {
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(37, 109, 143, 0.451); 
+    color: #eee;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.emp-img {
+    float: right;
+    width: 180px;
+    height: auto;
+    border: var(--standard-border) steelblue;
+    padding: 2px;
+    box-shadow: var(--shadow-gray);
+}
+
+.adventure-box p {
+    margin: 15px;
+    margin-left: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+    margin: 20px auto 15px;
+    width: 100%;
+}
+
+footer {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.cp-info p {
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+
+.social-icons {
+    position: absolute;
+    right: 0;
+    Top: 8px;
+}
+
+
+/* Class Selectors */
+
