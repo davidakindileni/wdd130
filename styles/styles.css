@@ -1,3 +1,9 @@
+/* Define CSS Variable */
+:root {
+    --main-bg-color: #eee;
+    --main-text-color: #333;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -34,8 +40,8 @@ aside {
     margin: 1rem 1rem 1rem 0;
     border: 1px solid rgb(0 0 0 / 0.2);
     padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     text-align: center;
 }
 
@@ -46,6 +52,6 @@ aside img {
 
 footer {
     margin-top: 10px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--main-bg-color);
     text-align:center;
 }
