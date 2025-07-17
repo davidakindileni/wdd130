@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Define CSS Variable */
 :root {
     --main-bg-color: #eee;
@@ -20,6 +26,7 @@ h1 {
 }
 
 main img {
+    float: right;
     width: 150px;
     height: auto;
     border: 1px solid black;
@@ -36,17 +43,20 @@ main {
 }
 
 aside {
-    width: 20rem;
-    margin: 1rem 1rem 1rem 0;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
+    width: 30rem;
     text-align: center;
 }
 
+aside h2 {
+    position: absolute;
+    top: 650px;
+    left: 225px;
+}
+
+
 aside img {
     width: 200px;
+    margin-bottom: 1rem;
     height: auto;
 }
 
@@ -55,3 +65,19 @@ footer {
     border-top: 1px solid var(--main-bg-color);
     text-align:center;
 }
+
+
+/* Class Selectors */
+
+.main-intro{
+    margin: 1rem 1rem 0 1rem;
+}
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
