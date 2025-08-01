@@ -27,7 +27,7 @@ header {
 	grid-template-columns: 120px 1fr;
 	align-items: center;
 	border-bottom: 1px solid #ccc;
-	max-width: 1000px;
+	max-width: 960px;
     height: auto;
 }
 
@@ -37,8 +37,27 @@ body {
     margin: 0 auto;
 }
 
-h1, h2 {
+h1 {
     font-family: var(--heading-font);
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #eee;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--hdr-highlight-color);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    align-items: center;
 }
 
 header img {
@@ -95,34 +114,13 @@ header nav a:hover {
     position: relative;
 }
 
-h1 {
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5); 
-    color: #eee;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-h2 {
-    color: var(--hdr-highlight-color);
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-    align-items: center;
-}
-
 .hero article {
     position: absolute;
     top: 120px;
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(37, 109, 143, 0.65); 
+    background-color: rgba(0, 0, 0, 0.4); /* 37, 109, 143 */
     padding: 5px;
 }
 
@@ -136,8 +134,9 @@ h2 {
 }
 
 .hero article p {
-    color: #ffffff;
+    color: #ffffff; /* #ffffff */
     padding: 1rem;
+    /* font-weight: bold; */
 }
 
 .history-box {
@@ -167,11 +166,14 @@ h2 {
 
 .adventure-imgs {
     display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
 }
 
-figure{
-    flex-flow: column;
-    padding: 5px;
+figure {
+    /* flex-flow: column; */
+    /* padding: 5px; */
     max-width: 160px;
 }
 
@@ -206,4 +208,92 @@ footer {
     font-size: 0.8rem;
     text-align: center;
     color: var(--hdr-highlight-color);
+}
+
+/* Contact Us Page */
+
+#contactus-pg body {
+    margin: 0;
+    padding: 0;
+}
+
+#contactus-pg form {
+    margin: 1rem auto;
+    max-width: 650px;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: 0.5rem; /* 8px */
+    background-color: rgb(238 238 238 / 0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#contactus-pg label, input, button, select, textarea {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+#contactus-pg label {
+    /* display: block; */
+    margin: 10px 0 5px;
+}
+
+#contactus-pg input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contactus-pg input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;;
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    display: block;
+    font-weight: normal;
+}
+
+.checkbox-group {
+    margin-left: 1rem;
+    margin-bottom: 10px;
+}
+
+#contactus-pg fieldset {
+    display: grid;
+    grid-gap: 0.5rem;
+    margin: 0.2rem 1rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+}
+
+
+#contactus-pg legend {
+    padding: 0.4rem;
+    color: navy;
+    font-size: 1.2em;
+}
+
+
+#contactus-pg button {
+    margin: 0 auto; /* 0.5rem 1rem */
+    background-color: navy;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    min-width: 25%;
+    justify-content: center;
+}
+
+#contactus-pg button:hover {
+    background-color: darkgreen;
 }
