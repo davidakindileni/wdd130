@@ -34,20 +34,31 @@ header {
 body {
     font-family: var(--body-font);
     font-size: 16px;
-    /* margin: 0 auto; */
 }
 
-#aboutus-pg h1 {
+#aboutus-pg h1, #home-pg h1 {
     position: absolute;
-    top: 40px;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.5); 
     color: #eee;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+#aboutus-pg h1 {
+    top: 40px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+#home-pg h1 {
+    top: 80px;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Times, 'Times New Roman', serif;
 }
 
 h2 {
@@ -103,12 +114,13 @@ header nav a:hover {
 
 .hero {
     position: relative;
+    margin-bottom: 3rem;
 }
 
 .hero-img {
     width: 100%;
     height: auto;
-    margin: 15px auto 0;
+    margin: 3rem auto 0;
     text-align: center;
     position: relative;
 }
@@ -119,8 +131,22 @@ header nav a:hover {
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.4); /* 37, 109, 143 */
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 5px;
+}
+
+#aboutus-pg .hero article {
+    top: 120px;
+    width: 90%;
+    left: 50%;
+}
+
+#home-pg .hero article{
+    position: absolute;
+    top: 370px;
+    width: 80%;
+    height: 120px;
+    text-align: center; 
 }
 
 .hero article img {
@@ -133,9 +159,57 @@ header nav a:hover {
 }
 
 .hero article p {
-    color: #ffffff; /* #ffffff */
+    color: #ffffff; 
     padding: 1rem;
-    /* font-weight: bold; */
+    margin-bottom: 1rem;
+}
+
+/* About & Offerings Grid */
+.about-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 0 !important;
+}
+
+.about-grid img {
+    width: 100%;
+    height: 250px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-gray);
+}
+
+.about-grid h2 {
+    margin-top: 1.5rem;
+    font-family: var(--heading-font);
+    color: var(--hdr-highlight-color);
+}
+
+.about-grid p {
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+#home-pg .hero article p {
+    font-size: 1.2rem;
+}
+
+#home-pg .hero article a {
+    margin: 1.5rem auto;
+    background-color: #006400;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+#home-pg article a:hover {
+    background-color: var(--accent2-color);
 }
 
 .history-box {
@@ -171,8 +245,6 @@ header nav a:hover {
 }
 
 figure {
-    /* flex-flow: column; */
-    /* padding: 5px; */
     max-width: 160px;
 }
 
@@ -218,8 +290,6 @@ footer {
 /* Contact Us Page */
 
 .contact-det-hdr {
-    /* margin: 0 auto; */
-    /* display: block; */
     text-align: center;
     margin: 15px auto;
     font-size: 1.5rem;
@@ -260,7 +330,6 @@ footer {
     color: #333;
 }
 .our-iframe {
-    /* max-width: 400px; */
     margin-top: 10px;
 }
 
@@ -280,8 +349,6 @@ footer {
 }
 
 #contactus-pg figure {
-    /* flex-flow: column; */
-    /* padding: 5px; */
     max-width: 220px;
 }
 
@@ -298,7 +365,7 @@ footer {
     padding: 1.5px;
 }
 
-#contactus-pg form {
+form {
     margin: 1rem auto;
     max-width: 650px;
     padding: 1rem;
@@ -308,24 +375,41 @@ footer {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-#contactus-pg fieldset {
-    /* display: grid; */
-    /* grid-gap: 0.5rem; */
+#home-pg form {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#contactus-pg fieldset, #home-pg fieldset {
     margin-left: 0;
     margin: 0.2rem 1rem 1rem;
     border: 1px solid rgb(0 0 0 / 0.2);
     padding: 1rem;
 }
 
-#contactus-pg label, input, button, select, textarea {
+#contactus-pg  label, input, button, select, textarea {
     font-family: Roboto, Arial, sans-serif;
 }
 
-#contactus-pg label {
+#home-pg  label, input, button, select, textarea {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+#contactus-pg label, #home-pg label {
     margin: 10px 5px;
 }
 
 #contactus-pg input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#home-pg input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
@@ -348,7 +432,7 @@ textarea {
 vertical-align: middle;
 }
 
-#contactus-pg legend {
+#contactus-pg legend, #home-pg legend {
     padding: 0.4rem;
     color: navy;
     font-size: 1.2em;
@@ -356,7 +440,7 @@ vertical-align: middle;
     font-weight: bold;
 }
 
-#contactus-pg button {
+#contactus-pg button, #home-pg button {
     display: block;
     margin: 0 auto; 
     background-color: navy;
@@ -368,7 +452,7 @@ vertical-align: middle;
     min-width: 25%;
 }
 
-#contactus-pg button:hover {
+#contactus-pg button:hover, #home-pg button:hover {
     background-color: darkgreen;
 }
 
@@ -387,3 +471,4 @@ vertical-align: middle;
     margin-left: 0.6rem;
     margin-bottom: 10px;
 }
+
