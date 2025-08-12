@@ -36,7 +36,7 @@ body {
     font-size: 16px;
 }
 
-#aboutus-pg h1, #home-pg h1 {
+#aboutus-pg h1, #home-pg h1, #trips-pg h1 {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5); 
     color: #eee;
@@ -48,7 +48,7 @@ body {
 #aboutus-pg h1 {
     top: 40px;
     left: 50%;
-    width: 100%;
+    width: 90%;
     transform: translateX(-50%);
 }
 
@@ -58,6 +58,15 @@ body {
     width: 80%;
     transform: translateX(-50%);
     font-size: 1.5rem;
+    font-family: Cambria, Cochin, Times, 'Times New Roman', serif;
+}
+
+#trips-pg h1 {
+    top: 80px;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    /* font-size: 1.5rem; */
     font-family: Cambria, Cochin, Times, 'Times New Roman', serif;
 }
 
@@ -114,13 +123,13 @@ header nav a:hover {
 
 .hero {
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .hero-img {
     width: 100%;
     height: auto;
-    margin: 3rem auto 0;
+    margin: 1.5rem auto 0;
     text-align: center;
     position: relative;
 }
@@ -142,11 +151,22 @@ header nav a:hover {
 }
 
 #home-pg .hero article{
-    position: absolute;
-    top: 370px;
+    /* position: absolute; */
+    top: 350px;
     width: 80%;
-    height: 120px;
+    height: 130px;
     text-align: center; 
+}
+
+#trips-pg .hero article{
+    /* position: absolute; */
+    top: 340px;
+    width: 80%;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-size: 1.2rem;
+    /* font-weight: bold; */
 }
 
 .hero article img {
@@ -180,7 +200,7 @@ header nav a:hover {
     box-shadow: var(--shadow-gray);
 }
 
-.about-grid h2 {
+.about-grid h2, .tile-container h2 {
     margin-top: 1.5rem;
     font-family: var(--heading-font);
     color: var(--hdr-highlight-color);
@@ -195,8 +215,8 @@ header nav a:hover {
     font-size: 1.2rem;
 }
 
-#home-pg .hero article a {
-    margin: 1.5rem auto;
+#home-pg .hero article a, #trips-pg .hero article a {
+    margin: 1.5rem auto 3rem !important;
     background-color: #006400;
     color: #ffffff;
     border: none;
@@ -208,7 +228,7 @@ header nav a:hover {
     text-decoration: none;
 }
 
-#home-pg article a:hover {
+#home-pg article a:hover, #trips-pg article a:hover {
     background-color: var(--accent2-color);
 }
 
@@ -472,3 +492,92 @@ vertical-align: middle;
     margin-bottom: 10px;
 }
 
+/* Trips Page */
+
+/* Container */
+.tile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    /* padding: 20px; */
+}
+
+/* Tile styles */
+.tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.tile h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Image */
+.tile img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Keeps images same height/width ratio */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Description */
+.tile p {
+    flex-grow: 1; /* Ensures equal height descriptions */
+    font-size: 0.95rem;
+    margin: 10px 0;
+}
+
+/* Button */
+.tile button {
+    background-color: #006400;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tile button:hover {
+    background-color: var(--accent2-color);
+}
+
+/* Make all tiles the same height */
+.tile {
+    height: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 2rem auto;
+    font-family: Arial, sans-serif;
+}
+caption {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: Navy;
+    margin-bottom: 1.5rem;
+}
+th, td {
+    border: 1px solid #999;
+    padding: 8px 12px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) td {
+    background-color: #fafafa;
+}
